@@ -1,0 +1,4 @@
+Timer 		KEYWORD1
+start		  KEYWORD2
+stop		  KEYWORD2
+read			KEYWORD2
