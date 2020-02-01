@@ -14,7 +14,3 @@ void setup() {
 void loop() {
   return;
   }
-
-void loop() {
-  return;
-  }
