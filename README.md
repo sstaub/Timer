@@ -22,7 +22,7 @@ Now, you can create a new object(s):
 Timer timer;
 // for micro second resolution:
 Timer timer(MICROS);
-ticker.start(); // started the timer
+ticker.start(); // start the timer
 ticker.puase(); // pause the timer
 ticker.resume(); // resume the timer
 ticker.stop(); // stops the timer
