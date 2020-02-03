@@ -1,6 +1,6 @@
 # Arduino Timer Library v1.0.0
 
-The **Arduino Timer Library** allows you to measure the time between start and stop command. The time can measured in milli or micro seconds.
+The **Arduino Timer Library** allows you to measure the time between started and stop command. The time can measured in milli or micro seconds. Micro seconds have only a resolution of 4µs!
 
 ## Installation
 
@@ -22,7 +22,9 @@ Now, you can create a new object(s):
 Timer timer;
 // for micro second resolution:
 Timer timer(MICROS);
-ticker.start(); // start the timer
+ticker.start(); // started the timer
+ticker.puase(); // pause the timer
+ticker.resume(); // resume the timer
 ticker.stop(); // stops the timer
 ticker.read(); // gives back the elapsed time in milli or micro seconds
 ```
@@ -64,14 +66,20 @@ Destructor for Ticker object
 	
 ### Functions
 
-**void start()**<br>
-Start the Timer. If it is paused, it will restart the Timer.
+**void start()**
+Start the Timer. If it is paused, it will restarted the Timer.
 
-**void stop()**<br>
+**void stop()**
+Pause the Timer.
+
+**void stop()**
+Resume the Timer after a pause.
+
+**void stop()**
 Stops the Timer.
 
-**uint32_t read()**<br>
-Returns the time passed between start and stop.
+**uint32_t read()**
+Returns the time passed between started and stop.
 
 
 

@@ -31,15 +31,40 @@ Timer::Timer(resolution_t resolution) {
 Timer::~Timer() {}
 
 void Timer::start() {
-	if(resolution == MILLIS) timeElapsed = millis();
-	if(resolution == MICROS) timeElapsed = micros();
+	elapsed = 0;
+	if(resolution == MILLIS) started = millis();
+	if(resolution == MICROS) started = micros();
+	status = RUNNING;
+	}
+
+void Timer::pause() {
+	if (status == RUNNING) {
+		if(resolution == MILLIS) elapsed = elapsed + millis() - started;
+		if(resolution == MICROS) elapsed = elapsed + micros() - started;
+		status = PAUSED;
+		}
+	}
+
+void Timer::resume() {
+	if (status == PAUSED) {
+		if(resolution == MILLIS) started = millis();
+		if(resolution == MICROS) started = micros();
+		status = RUNNING;
+		}
 	}
 
 void Timer::stop() {
-	if(resolution == MILLIS) timeElapsed = millis() - timeElapsed;
-	if(resolution == MICROS) timeElapsed = micros() - timeElapsed;
+	if (status == RUNNING) {
+		if(resolution == MILLIS) elapsed = millis() - started + elapsed;
+		if(resolution == MICROS) elapsed = micros() - started + elapsed;
+		}
+	status = STOPPED;
 	}
 
 uint32_t Timer::read() {
-	return timeElapsed;
+	if (status == RUNNING) {
+		if(resolution == MILLIS) return millis() - started + elapsed;
+		if(resolution == MICROS) return micros() - started + elapsed;
+		}
+	return elapsed;
 	}

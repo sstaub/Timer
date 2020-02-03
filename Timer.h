@@ -63,10 +63,22 @@ public:
 	 */
 	~Timer();
 
-	/** start the ticker
+	/** started the ticker
 	 *
 	 */
 	void start();
+
+	/**
+	 * @brief pause the timer
+	 * 
+	 */
+	void pause();
+
+	/**
+	 * @brief resume the timer after pause
+	 * 
+	 */
+	void resume();
 
 	/** stops the ticker
 	 *
@@ -82,8 +94,10 @@ public:
 
 
 private:
-	uint32_t timeElapsed;
+	uint32_t started;
+	uint32_t elapsed;
 	resolution_t resolution;
+	status_t status;
 };
 
 #endif

@@ -1,13 +1,13 @@
 {
   "name": "Timer",
   "keywords": "Timer",
-  "description": "A small library for measuring the time between start and stop command.",
+  "description": "A small library for measuring the time between started and stop command.",
   "repository":
   {
     "type": "git",
     "url": "https://github.com/sstaub/Timer"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "frameworks": "arduino",
   "platforms": "*"
 }
