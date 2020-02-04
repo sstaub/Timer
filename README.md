@@ -66,20 +66,17 @@ Destructor for Ticker object
 	
 ### Functions
 
-**void start()**
+**void start()**<br>
 Start the Timer. If it is paused, it will restarted the Timer.
 
-**void pause()**
+**void pause()**<br>
 Pause the Timer.
 
-**void resume()**
+**void resume()**<br>
 Resume the Timer after a pause.
 
-**void stop()**
+**void stop()**<br>
 Stops the Timer.
 
-**uint32_t read()**
+**uint32_t read()**<br>
 Returns the time passed between started and stop.
-
-
-
