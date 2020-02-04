@@ -23,7 +23,7 @@ Timer timer;
 // for micro second resolution:
 Timer timer(MICROS);
 ticker.start(); // start the timer
-ticker.puase(); // pause the timer
+ticker.pause(); // pause the timer
 ticker.resume(); // resume the timer
 ticker.stop(); // stops the timer
 ticker.read(); // gives back the elapsed time in milli or micro seconds
@@ -69,10 +69,10 @@ Destructor for Ticker object
 **void start()**
 Start the Timer. If it is paused, it will restarted the Timer.
 
-**void stop()**
+**void pause()**
 Pause the Timer.
 
-**void stop()**
+**void resume()**
 Resume the Timer after a pause.
 
 **void stop()**
