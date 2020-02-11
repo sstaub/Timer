@@ -79,4 +79,4 @@ Resume the Timer after a pause.
 Stops the Timer.
 
 **uint32_t read()**<br>
-Returns the time passed between started and stop.
+Returns the time after start, you can read the elapsed time also while running.
