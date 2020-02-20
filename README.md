@@ -1,4 +1,4 @@
-# Arduino Timer Library v1.1.0
+# Arduino Timer Library v1.1.2
 
 The **Arduino Timer Library** allows you to measure the time between started and stop command. The time can measured in milli or micro seconds. Micro seconds have only a resolution of 4µs!
 
