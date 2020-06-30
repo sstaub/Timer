@@ -22,11 +22,11 @@ Now, you can create a new object(s):
 Timer timer;
 // for micro second resolution:
 Timer timer(MICROS);
-ticker.start(); // start the timer
-ticker.pause(); // pause the timer
-ticker.resume(); // resume the timer
-ticker.stop(); // stops the timer
-ticker.read(); // gives back the elapsed time in milli or micro seconds
+timer.start(); // start the timer
+timer.pause(); // pause the timer
+timer.resume(); // resume the timer
+timer.stop(); // stops the timer
+timer.read(); // gives back the elapsed time in milli or micro seconds
 ```
 
 ## Example
