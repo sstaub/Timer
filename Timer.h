@@ -92,6 +92,12 @@ public:
 	 */
 	uint32_t read();
 
+	/**
+	 * @brief get the state of the timer
+	 * 
+	 * @return status_t 
+	 */
+	status_t state();
 
 private:
 	uint32_t started;

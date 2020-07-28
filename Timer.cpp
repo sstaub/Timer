@@ -68,3 +68,7 @@ uint32_t Timer::read() {
 		}
 	return elapsed;
 	}
+
+status_t Timer::state() {
+	return status;
+	}

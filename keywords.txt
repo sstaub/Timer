@@ -4,3 +4,4 @@ pause			KEYWORD2
 resume		KEYWORD2
 stop			KEYWORD2
 read			KEYWORD2
+state		KEYWORD2

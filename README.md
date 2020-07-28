@@ -22,11 +22,11 @@ Now, you can create a new object(s):
 Timer timer;
 // for micro second resolution:
 Timer timer(MICROS);
-ticker.start(); // start the timer
-ticker.pause(); // pause the timer
-ticker.resume(); // resume the timer
-ticker.stop(); // stops the timer
-ticker.read(); // gives back the elapsed time in milli or micro seconds
+timer.start(); // start the timer
+timer.pause(); // pause the timer
+timer.resume(); // resume the timer
+timer.stop(); // stops the timer
+timer.read(); // gives back the elapsed time in milli or micro seconds
 ```
 
 ## Example
@@ -41,8 +41,10 @@ Timer timer();
 void setup() {
   Serial.begin(9600);
   timer.start();
+  if(timer.state() == RUNNING) Serial.println("timer running");
   delay(1000);
   timer.stop();
+  if(timer.state() == STOPPED) Serial.println("timer stopped");
   Serial.print("time elapsed ms: ");
   Serial.println(timer.read());
   }
@@ -80,3 +82,6 @@ Stops the Timer.
 
 **uint32_t read()**<br>
 Returns the time after start, you can read the elapsed time also while running.
+
+**status_t state()**<br>
+Get the Timer state (RUNNING, PAUSED, STOPPED).
