@@ -4,7 +4,7 @@ The **Arduino Timer Library** allows you to measure the time between started and
 
 ## Installation
 
-1. Downlaod from the Release site
+1. Download from the Release site
 2. Unzip
 3. Move the folder to your Arduino Library folder 
 
@@ -31,7 +31,7 @@ timer.read(); // gives back the elapsed time in milli or micro seconds
 
 ## Example
 
-Complete example. Here we created one timer, you can run it and get the result in the Serial monitor.
+Complete example: Here we created one timer, you can run it and get the result in the Serial monitor.
 
 ```
 #include "Timer.h"
