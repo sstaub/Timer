@@ -37,7 +37,7 @@ Complete example: Here we created one timer, you can run it and get the result i
 ```
 #include "Timer.h"
 
-Timer timer();
+Timer timer;
 
 void setup() {
   Serial.begin(9600);
