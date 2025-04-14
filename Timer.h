@@ -38,7 +38,7 @@ enum resolution_t {MICROS, MILLIS};
 /** Ticker status
  *
  * @param STOPPED default, ticker is stopped
- * @param RUNNIBG ticker is running
+ * @param RUNNING ticker is running
  * @param PAUSED ticker is paused
  *
  */
